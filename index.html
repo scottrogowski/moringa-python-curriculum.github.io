@@ -1,0 +1,337 @@
+<h2 id="introduction">Introduction</h2>
+<p>Hello and welcome to your first day at Moringa School's web programming in Python course! Here is what you can expect going forward:</p>
+<ul>
+<li>Within the next 30 minutes, you will have run you first terminal command and built you first Python program</li>
+<li>Before the end of tomorrow, you will have built a calculator</li>
+<li>By the end of the week, you will complete a program that simulates a game of Bao</li>
+<li>By the end of 4 weeks, you will have built your first website</li>
+<li>At the end of the course, you will have completed a professional website of your own design that you will be able to show potential employers.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>We will only need three things for our first few days</p>
+<ul>
+<li>The python interpreter</li>
+<li>A terminal application</li>
+<li>A text editor</li>
+</ul>
+<p>On our Ubuntu computers, we will already have the first two preinstalled. For a text editor, we will be using Sublime Text. We can install it here [https://www.sublimetext.com/3]</p>
+<p>One last thing we will need to do is to enable the ability to run Sublime Text from the command line, to do this, open the terminal by going to "Utilities->Terminal".</p>
+<p>It will open and look something like this.</p>
+<p><img src="0.png" alt="alt text" title="Blank Terminal" /></p>
+<p>Copy and paste this line into the terminal and hit enter</p>
+<p>ln -s /opt/sublime/sublime_text ~/subl</p>
+<p>For now, don't worry about what that did. We'll go over what the terminal is momentarily and will spend an entire day learning how it works later this week.</p>
+<p>To check whether it worked, quit the terminal application and open it again. When we type <code>subl</code>, the terminal will output a large block of text specifying what <code>subl</code> is and how it works. Don't worry about this either! For now, we know that it works and we are ready to write a program!</p>
+<h2 id="ourfirstprogram">Our first program</h2>
+<p>We'll start by writing what might be the simplest Python program in the world. Go back to the terminal, type <code>subl program_1.py</code> and hit enter. Sublime text will open with a new file called <code>program_1.py</code>. At first, this will be a blank file that looks something like this.</p>
+<p><img src="1.png" alt="alt text" title="Blank Sublime" /></p>
+<p>On the first line, type:</p>
+<p><img src="2.png" alt="alt text" title="First program Sublime" /></p>
+<p>It is important that:</p>
+<ul>
+<li>we spell <code>print</code> correctly</li>
+<li>we surround <code>Python is easy!</code> with quotes (<code>"</code>) like <code>"Python is easy"</code></li>
+<li>we have a space between <code>print</code> and the text we are printing.</li>
+</ul>
+<p>Let's save our file and quit Sublime Text. In the terminal, type <code>python program_1.py</code>. If we did everything right, we will see <code>Python is easy!</code> written on the next line like this.</p>
+<p><img src="3.png" alt="alt text" title="Finished terminal" /></p>
+<p>Congratulations! We just wrote our first program! If something went wrong, let an instructor know and we'll come help you out.</p>
+<h2 id="background">Background</h2>
+<h3 id="whatiscomputerprogramming">What is computer programming?</h3>
+<p>Computers aren't as smart as you might think. In fact, they're rather stupid in many ways! They can run simple commands but not much else. What sort of commands can a computer run?</p>
+<ul>
+<li>"Print"-ing <code>Python is easy!</code></li>
+<li>Multiplying 5*100</li>
+<li>Generating a random number between 1 and 10</li>
+<li>Determining whether 83 is greater than 54</li>
+</ul>
+<p>If we want to do something more complicated than this, we need to write a bunch of these commands. By chaining together commands, one after the other, a computer can do complicated things like</p>
+<ul>
+<li>Calculate how many atoms are in a gram of sugar</li>
+<li>Run a website</li>
+<li>Drive a car</li>
+</ul>
+<h3 id="whatispython">What is Python?</h3>
+<p>Python is a programming language that has the advantage of being both easy to learn and very widely used. On github, a popular programming website, Python is the third most popular language, behind only Javascript (which we will also learn), and Java (which isn't very good for building websites). YouTube is written in Python. So is Instragram. But it goes far beyond building websites. Python has been used for everything from building video games to predicting the weather. Like all programming languages, Python also has it's disadvantages. Most importantly, it is slower than most other languages. In practice, modern computers and phones are so fast that it doesn't matter for anything that we will learn in this course.</p>
+<h3 id="whatistheterminal">What is the terminal?</h3>
+<p>The terminal is a way to give commands to a computer. It is more than just another application on your computer. It is an alternative to your computer's desktop or the UI on your Android phone. In fact, some computers don't even have a desktop, they only have a terminal! Becoming comfortable with it is essential to this course and is something we will cover over the next few days.</p>
+<h2 id="variables">Variables</h2>
+<p>Let's open the terminal and type <code>subl program_2.py</code>. (Note that <code>.py</code> is short for Python). In Sublime Text, enter this program. Again, be sure to write it exactly as it is shown here.</p>
+<pre><code>today = "Monday"
+print "Today is"
+print today
+</code></pre>
+<p>I bet you can figure out what this program is going to do but let's run it anyway to make sure. Go back to the terminal and type</p>
+<pre><code>python program_2.py
+</code></pre>
+<h3 id="whathappened">What happened?</h3>
+<p>This three line program does three things:</p>
+<ul>
+<li>Stores <code>today</code> as a variable in the computer memory</li>
+<li>Prints the text we give it</li>
+<li>Pulls <code>today</code> out of computer memory and prints that too.</li>
+</ul>
+<p>Unlike what you might remember from math class, in programming languages <code>=</code> is used as an "assignment" operator. Anything on the left of <code>=</code> gets assigned the value of what's on the right.</p>
+<p>Easy right? Let's see what other kinds of things we can do with variables.</p>
+<p>We can use variables as many times as we like</p>
+<pre><code>today = "Monday"
+print "Today is"
+print today
+print "The day before tomorrow is"
+print today
+</code></pre>
+<p>We can reassign variables</p>
+<pre><code>day = "Tuesday"
+print "Today is not"
+print day
+day = "Monday"
+print "The day is actually"
+print day
+</code></pre>
+<p>If we don't end up using a variable, no big deal</p>
+<pre><code>variable = "This variable will never see the light of day"
+print "I'm the last line of this program!"
+</code></pre>
+<h2 id="dealingwitherrors">Dealing with errors</h2>
+<p>Errors, also known as bugs, are common. When you are learning, you can expect to make a lot of them. If you get one, don't worry! We all made them and even experienced programmers can expect to make dozens every day. Lucky for us, Python is nice enough to tell us what we did wrong and where the problem is! Let's make one on purpose to see how this works. In a new file, write these lines.</p>
+<pre><code>print "Python is easy!"
+print "Hi, my name is"
+print name
+</code></pre>
+<p>In this case, we haven't told the computer what is assigned to <code>name</code> so it isn't going to know what to print! Save this as <code>program_3.py</code> and run it. We will see:</p>
+<pre><code>Python is easy!
+Hi, my name is
+Traceback (most recent call last):
+  File "program_3.py", line 3, in &lt;module&gt;
+    print name
+NameError: name 'name' is not defined
+</code></pre>
+<p>Notice a few things about this.</p>
+<ul>
+<li>Python actually ran the first two lines of our program! Generally, Python is very forgiving and will run until it can't figure out how to execute the line we gave it.</li>
+<li>We can see where the error was <code>File "program_3.py", line 3</code>.</li>
+<li>We can see the problematic line, <code>print name</code>.</li>
+<li>We can see what is wrong with this line <code>NameError: name 'name' is not defined</code>. In most cases, like this, the error will be self-explanatory. Sometimes, we'll have to think about it to figure out what went wrong.</li>
+</ul>
+<p>Let's try another kind of error. Earlier we were extra-careful that our text, <code>Python is easy</code>, had quotes around it. Let's see what happens when it doesn't! On the command line, type <code>subl program_3.py</code> to edit our program. Delete the end-quote of the second line so that our program looks like</p>
+<pre><code>print "Python is easy!"
+print "Hi, my name is
+print name
+</code></pre>
+<p>Run it again. We will see</p>
+<p>File "test.py", line 2
+    print "Hi, my name is
+                        ^
+SyntaxError: EOL while scanning string literal</p>
+<p>Again, Python is showing us where the problem is ("test.py", line 2). It even points to where we need a quote using the <code>^</code> character! It then tells us that we have a "SyntaxError: EOL while scanning string literal". SyntaxError is just a fancy way of saying that what we wrote isn't valid in the Python Language and that Python can't understand it. Don't worry about the rest of the text for now. We'll get to what that all means over the next few days.</p>
+<p>What else is different about this error? Even though our error was on the second line, Python didn't run the first line! And this makes sense. If Python can't understand the language that is coming in, it can't do anything at all.</p>
+<p>From now on, we'll see examples of common errors colored in red like this</p>
+<pre><code>print "Python is easy!"
+print "Hi, my name is
+print name
+</code></pre>
+<p>Let's look at some other simple things we can and can't do in Python.</p>
+<p>Print is a keyword in the python language. It must be spelled correctly</p>
+<pre><code>prnt "Python is easy!"
+</code></pre>
+<p>Commands can only do one thing</p>
+<pre><code>day = "Monday"
+print "Today is" day
+</code></pre>
+<p>Each line can only do one thing</p>
+<pre><code>day = "Monday"
+print "Today is" print day
+</code></pre>
+<p>We CAN combine things together though using the <code>+</code> operator</p>
+<pre><code>day = "Monday"
+print "Today is " + day
+</code></pre>
+<p>Assignment only goes one direction. It doesn't work the other way</p>
+<pre><code>"Monday" = day
+print "Today is " + day
+</code></pre>
+<p>Variables can be any combination of letters, numbers, and underscores</p>
+<pre><code>NaIrObI_2028 = "Olympic games?"
+</code></pre>
+<p>They can't be just numbers though</p>
+<pre><code>2028 = "Olympics?"
+</code></pre>
+<p>Variables can be assigned to other variables and combined in all sorts of ways</p>
+<pre><code>noun = "Moringa"
+my_school = noun
+verb = "Studying"
+what_I_am_doing = verb + " at " + my_school
+complete_sentence = "I am " + what_I_am_doing
+print complete_sentence
+</code></pre>
+<p>Sometimes whitespace matters</p>
+<pre><code>print"this looks funny and won't work either"
+ print "Indentation is important in Python!"
+</code></pre>
+<p>Most of the time, it doesnt</p>
+<pre><code>itTurnsOut="SpacesUsuallyDoNotMatter"
+print "Can You scrunch things?"+itTurnsOut
+print "This"+"Looks"+"Funny"+"And"+"Is"+"Hard"+"To"+"Read"+"Though"
+
+print "Also, you can have blank lines"
+
+
+
+
+print "Use as many as you need to organize your code"
+</code></pre>
+<p>Variables can be all sorts of things, for example, numbers</p>
+<pre><code>five = 5
+print five
+
+pi = 3.145926
+print pi
+</code></pre>
+<p>Math is easy with Python!</p>
+<pre><code>five = 5
+ten = five + five
+one_hundred = ten * 10
+fifty = one_hundred / 2
+forty_nine = fifty - 1
+print forty_nine
+print forty_nine * 10
+</code></pre>
+<p>We cannot, however, combine numbers and text together</p>
+<pre><code>ten = 10
+print "5 + 5 = " + ten
+</code></pre>
+<p>(There are actually ways to combine them together, which we'll see later.)</p>
+<h2 id="functions">Functions</h2>
+<p>Functions are a way to break-up longer programs, organize our code, and do things repeatedly. Let's see a simple example.</p>
+<pre><code>def say_snake():
+    print "snake"
+
+print "A python is a type of"
+say_snake()
+</code></pre>
+<p>Go ahead and try this. Our program will output</p>
+<pre><code>A python is a type of
+snake
+</code></pre>
+<p>Let's see some more examples.</p>
+<p>Functions must have a colon</p>
+<pre><code>def say_snake()
+    print "snake"
+
+print "A python is a type of"
+say_snake()
+</code></pre>
+<p>And they must be indented.</p>
+<pre><code>def say_snake():
+print "snake"
+
+print "A python is a type of"
+say_snake()
+</code></pre>
+<p>Four spaces is the most common but any number works. Occassionally, people use two spaces</p>
+<pre><code>def say_snake():
+  print "snake"
+
+print "A python is a type of"
+say_snake()
+</code></pre>
+<p>We can have as many lines as ee want in a function</p>
+<pre><code>def three_fruits():
+    print "apple"
+    print "orange"
+    print "banana"
+
+three_fruits()
+</code></pre>
+<p>Functions can have an argument which is just a variable. This variable can be of any type.</p>
+<pre><code>def make_simon_say(word):
+    print "Simon says " + word
+
+def square(x):
+    print x * x
+
+make_simon_say("chocolate")
+square(5)
+</code></pre>
+<p>Multiple variables are also possible. Just use a comma</p>
+<pre><code>def times(x, y):
+    print x * y
+
+times(7, 9)
+</code></pre>
+<p>Anything, that can be done in the main program, can be done in a function.
+For example, we can reassign variables</p>
+<pre><code>def verb_it(word):
+    word = word + "ing"
+    print word
+
+verb_it("Cook")
+</code></pre>
+<p>Or even call other functions!</p>
+<pre><code>def number_of_toes(toe_count):
+    print toe_count
+    print "toes"
+
+def number_of_fingers(finger_count):
+    print finger_count
+    print "fingers"
+
+def how_many_fingers_and_toes_do_humans_have():
+    print "humans have"
+    number_of_toes(10)
+    print "and"
+    number_of_fingers(10)
+
+how_many_fingers_and_toes_do_humans_have()
+</code></pre>
+<p>Functions are more useful when we use the <code>return</code> statement</p>
+<pre><code>def times(x, y):
+    return x * y
+
+print "8*100 equals"
+print times(8, 100)
+
+print "2*3*4 equals"
+print times(2, 3) * 4
+
+print "5*6*7*8 equals"
+five_times_six = times(5, 6)
+
+print five_times_six * times(7, 8)
+</code></pre>
+<h2 id="usingraw_input">Using raw_input</h2>
+<p>In addition to being able to write our own functions, Python has many functions built-in as part of the language. One of those is called <code>raw_input()</code>. Let's see how it works. Type this in a new file.</p>
+<pre><code>print "Write something"
+something = raw_input()
+print "You wrote " + something
+</code></pre>
+<p>Run the program with python. We will see "Write something" but the program doesn't complete. This is because it is waiting for our input. Type "echo" and hit return. We will see "You wrote echo". Congratulations, we've built our first interactive program!</p>
+<p>Raw input can also take a prompt as an argument.</p>
+<pre><code>age = raw_input("How old are you?")
+print "You are " + age + " years old"
+</code></pre>
+<h2 id="understandingthedifferenttypesofvariables">Understanding the different types of variables.</h2>
+<p>Earlier, we learned that we can't mix text and numbers together. For example, this doesn't work.</p>
+<pre><code>print "The square root of four is " + 2
+</code></pre>
+<p>This is because text and numbers are processed differently by computers. And it's not even safe to say all numbers are processed the same way! Let's look at the different types of variables we've encountered so far.</p>
+<h3 id="strings">Strings</h3>
+<p>"String" is the way we say "text" in the programming world. It is the term we will be using from now on. They are called strings because they are actually composed of individual characters joined together. So the string, "Tea", is composed of the characters "T"-"e"-"a", joined together. When we execute the command <code>"Tea" + "Cup"</code>, what we are doing is linking the string "T"-"e"-"a" to the string "C"-"u"-"p" to generate the new string "T"-"e"-"a"-"C"-"u"-"p".
+To convert anything into a string, use the <code>str()</code> function like</p>
+<pre><code>print str(10.5)
+print str(3) + "+" + str(2) + " = " + str(5)
+</code></pre>
+<h3 id="integers">Integers</h3>
+<p>"Integers" or "ints" are whole numbers like <code>7</code>, <code>0</code>, <code>-32</code>, and <code>3783426</code>. In practice, these are the most common types of variables in programming.
+To convert anything into an integer, use the int function like</p>
+<pre><code>print int("10") + 5
+print "= 15"
+</code></pre>
+<h3 id="floats">Floats</h3>
+<p>"Floating point numbers" or "floats" are numbers that have a decimal point like <code>.2</code>, <code>95.7</code>, <code>1.0</code> or <code>.00000032</code>. For a computer, doing math on floats is different than doing math on integers so they are treated differently internally. The important thing to remember about floats is that for many decimal numbers, it is impossible to store the entire number in a variable. For example, the number 5.0/6.0 is ".8333333333....". This float has an infinite number of 3s and we can only store so many. Because of this, we are going to get rounding errors
+To convert anything into a float, use the float function like</p>
+<pre><code>print float("3.5") + 2.5
+print "= 6.0"
+print float(12)
+print "= 12.0"
+</code></pre>
